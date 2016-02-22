@@ -1,0 +1,93 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center">
+    <h3 *ngIf="!contact.id">Detail - New contact</h3>
+    <h3 *ngIf="contact.id">Detail - {{ contact.firstName }} {{ contact.lastName }}</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal" [ngFormModel]="form" (ngSubmit)="save()">
+      <div class="form-group">
+        <label for="firstName" class="col-sm-2 control-label">First name</label>
+        <div class="col-sm-10">
+          <input class="form-control" ngControl="firstName" [(ngModel)]="contact.firstName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName" class="col-sm-2 control-label">Last name</label>
+        <div class="col-sm-10">
+          <input class="form-control" ngControl="lastName" [(ngModel)]="contact.lastName">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="imageUrl" class="col-sm-2 control-label">Image URL</label>
+        <div class="col-sm-10">
+          <input class="form-control" ngControl="imageUrl" [(ngModel)]="contact.imageUrl">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="skype" class="col-sm-2 control-label">Skype</label>
+        <div class="col-sm-10">
+          <input class="form-control" ngControl="skype" [(ngModel)]="contact.skype">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="twitter" class="col-sm-2 control-label">Twitter</label>
+        <div class="col-sm-10">
+          <input class="form-control" ngControl="twitter" [(ngModel)]="contact.twitter">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="notes" class="col-sm-2 control-label">Notes</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" [(ngModel)]="contact.notes"></textarea>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-danger" (click)="back()">Back</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<div class="panel panel-default" *ngIf="contact.id">
+  <div class="panel-heading text-center">
+    <h3>Groups</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <td>
+          <select class="form-control" [(ngModel)]="selectedGroupId" placeholder="Select group">
+            <option *ngFor="#group of remainingGroups" [value]="group.id">
+              {{ group.name }}
+            </option>
+          </select>
+        </td>
+        <td>
+          <button type="button" class="fa fa-plus btn btn-primary pull-right" (click)="addSelectedGroup()" (disabled)="!selectedGroupId">
+          </button>
+        </td>
+      </tr>
+      <tr *ngFor="#contactGroup of contactGroups">
+        <td>{{ contactGroup.group.name }}</td>
+        <td>            
+          <button type="button" class="fa fa-trash btn btn-danger pull-right" (click)="remove(contactGroup)">
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<div *ngIf="contact.id">
+  <contact-info-list></contact-info-list>
+</div>
