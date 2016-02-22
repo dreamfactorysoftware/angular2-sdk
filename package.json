@@ -1,22 +1,14 @@
 {
-  "name": "angular2-seed",
+  "name": "angular2-sdk",
   "version": "0.0.0",
-  "description": "Seed for Angular 2 apps",
+  "description": "Sample dreamfactory addressbook in angular2",
   "repository": {
-    "url": "https://github.com/mgechev/angular2-seed"
+    "url": "https://github.com/dreamfactorysoftware/angular2-sdk"
   },
   "scripts": {
     "build.dev": "gulp build.dev",
     "build.dev.watch": "gulp build.dev.watch",
     "build.prod": "gulp build.prod",
-    "build.test": "gulp build.test",
-    "build.test.watch": "gulp build.test.watch",
-    "docs": "npm run gulp -- build.docs && npm run gulp -- serve.docs",
-    "e2e": "protractor",
-    "e2e-live": "protractor --elementExplorer",
-    "gulp": "gulp",
-    "karma": "karma",
-    "karma.start": "karma start",
     "lint": "gulp tslint",
     "postinstall": "tsd reinstall --clean && tsd link && tsd rebundle && gulp check.versions && gulp postinstall",
     "reinstall": "rimraf node_modules && npm cache clean && npm install",
@@ -28,8 +20,7 @@
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start"
   },
-  "author": "Minko Gechev <mgechev>",
-  "license": "MIT",
+  "author": "Andy Rai <javascriptboss99>",
   "devDependencies": {
     "angular2-hot-loader": "0.0.16",
     "async": "^1.4.2",
