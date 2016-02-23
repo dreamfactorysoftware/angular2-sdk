@@ -11,12 +11,15 @@ import {
 } from '../config';
 
 export = function buildIndexProd(gulp, plugins) {
+  console.log('plugins are ', plugins)
   return function () {
     return gulp.src(join(APP_SRC, 'index.html'))
       .pipe(injectJs())
       .pipe(injectCss())
       .pipe(plugins.template(templateLocals()))
-      .pipe(gulp.dest(APP_DEST));
+      .pipe(gulp.dest(APP_DEST))
+      .pipe(plugins.zip('angular2-sdk.zip'))
+      .pipe(gulp.dest('../'));
   };
 
   function inject(...files) {
