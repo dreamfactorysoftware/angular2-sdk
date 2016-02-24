@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= APP_TITLE %></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script>
+    window.instanceUrl = 'http://127.0.0.1:8080';
+    window.appKey = '08aed7216cc4f57313855be67b1cd4e520940bd52dcb082cd744ca72a39dea0b';
+  </script>
+
+
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body>
+
+  <app>Loading...</app>
+
+  <!-- shims:js -->
+  <!-- endinject -->
+
+  <!-- libs:js -->
+  <!-- endinject -->
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <% if (ENV === 'dev') { %>
+  <script>System.config(<%= JSON.stringify(SYSTEM_CONFIG) %>)</script>
+
+  <script>
+    System.import('<%= BOOTSTRAP_MODULE %>')
+      .catch(function (e) {
+        console.error(e,
+          'Report this error at https://github.com/mgechev/angular2-seed/issues');
+      });
+  </script>
+  <% } %>
+
+</body>
+</html>
