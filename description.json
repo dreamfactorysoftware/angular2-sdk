@@ -1,7 +1,7 @@
 {
-	"name":"Address Book for Angular2",
+	"name":"angular2-sdk",
 	"description":"An address book app for Angular2 showing user registration, user login, and CRUD.",
 	"type": 1,
-	"path": "/angular2-sdk/dist/prod/index.html",
+	"path": "/angular2-sdk/index.html",
 	"is_active": true
 }
