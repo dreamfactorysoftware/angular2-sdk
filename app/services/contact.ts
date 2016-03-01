@@ -19,9 +19,9 @@ export class ContactService {
 	};
 
 
-	query (params?:any): Observable<Contact[]> {
+	query (params?:URLSearchParams): Observable<Contact[]> {
 		return this.httpService.http
-			.get(this.baseResourceUrl)
+			.get(this.baseResourceUrl, { search: params })
 			.map((response) => {
 				var result: any = response.json();
 				let contacts: Array<Contact> = [];

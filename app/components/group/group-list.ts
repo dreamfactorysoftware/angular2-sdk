@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
+import {URLSearchParams} from 'angular2/http';
 
 import {Group} from '../../models/group';
 import {GroupService} from '../../services/group';
@@ -26,7 +27,9 @@ export class GroupListCmp {
 
 	getList() {
 		let self = this;
-		this.groupService.query()
+		let params = new URLSearchParams();
+		params.set('order', 'name+ASC');
+		this.groupService.query(params)
 			.subscribe((groups: Group[]) => {
 				self.groups = groups
 			});

@@ -27,7 +27,6 @@ export class LoginCmp {
 	}
 
 	private storeToken (data) {
-		debugger;
 		this.httpService.http._defaultOptions.headers.set('X-Dreamfactory-Session-Token', data && data.session_token);
 		localStorage.setItem('session_token', data.session_token);
 		this._router.navigate(['ContactList']);

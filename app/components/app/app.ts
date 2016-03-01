@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from 'angular2/core';
 import {
+  Router,
   RouteConfig,
   ROUTER_DIRECTIVES
 } from 'angular2/router';
@@ -13,15 +14,16 @@ import {GroupListCmp} from '../group/group-list';
 import {GroupCmp} from '../group/group';
 import {LoginCmp} from '../login/login';
 import {RegisterCmp} from '../register/register';
-import {NameList} from '../../services/name_list';
+
+import {BaseHttpService} from '../../services/base-http';
 
 @Component({
   selector: 'app',
-  viewProviders: [NameList],
   templateUrl: './components/app/app.html',
   styleUrls: ['./components/app/app.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES],
+  providers: [BaseHttpService]
 })
 @RouteConfig([
   { path: '/', component: ContactListCmp, as: 'ContactList' },
@@ -36,4 +38,15 @@ import {NameList} from '../../services/name_list';
   { path: '/register', component: RegisterCmp, as: 'Register' },
   { path: '/about', component: AboutCmp, as: 'About' }
 ])
-export class AppCmp {}
+export class AppCmp {
+
+  constructor (private httpService: BaseHttpService, private _router:Router) {
+
+  }
+
+  logout () {
+    this.httpService.http._defaultOptions.headers.set('X-Dreamfactory-Session-Token', '');
+    localStorage.setItem('session_token', '');
+    this._router.navigate(['Login']);
+  }
+}

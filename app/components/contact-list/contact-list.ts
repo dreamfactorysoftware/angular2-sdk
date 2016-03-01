@@ -1,6 +1,7 @@
 import {Component, OnInit} from 'angular2/core';
 import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
 
+import {URLSearchParams} from 'angular2/http';
 import {Contact} from '../../models/contact';
 import {ContactService} from '../../services/contact';
 import {BaseHttpService} from '../../services/base-http';
@@ -23,13 +24,11 @@ export class ContactListCmp implements OnInit {
 		this.getList();
 	}
 
-	ngOnInit () {
-		console.log('Init called for contacts')
-	}
-
 	getList () {
 		let self = this;
-		let params: any = {};
+		let params: URLSearchParams = new URLSearchParams();
+		params.set('order', 'last_name+ASC');
+
 		this.contactService.query(params)
 			.subscribe((contacts: Contact[]) => {
 				self.contacts = contacts

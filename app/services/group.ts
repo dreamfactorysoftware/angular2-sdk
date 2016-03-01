@@ -22,9 +22,9 @@ export class GroupService {
 	};
 
 
-	query(): Observable<Group[]> {
+	query(params?: URLSearchParams): Observable<Group[]> {
 		return this.httpService.http
-			.get(this.baseResourceUrl)
+			.get(this.baseResourceUrl, { search: params })
 			.map((response) => {
 				var result: ServerResponse = response.json();
 				let groups: Array<Group> = [];
