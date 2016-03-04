@@ -86,6 +86,198 @@ You can launch the app from the Apps tab in the admin console.
 When the app starts up you can register a new user, or log in as an existing user. Currently the app does not support registering and logging in admin users.
 
 
+#Example API calls 
+
+
+The dreamfactory for Angular2 has a base http service, an interceptor and a login module
+which takes care of attaching authorization headers to every outgoing
+request. Hence BaseHttpRequest module should be imported in every
+component that wants to make api calls.
+
+
+Angular2 does not encourage to use globals hence as a workaround in the
+BaseHttpService we have a http object which will be used for every http
+api call. The login module will have following code which takes care
+of setting default headers for all requests
+
+```javascript
+this.httpService.http._defaultOptions.headers.set('X-Dreamfactory-Session-Token',
+data && data.session_token);
+```
+
+where httpService is a BaseHttpService object.
+
+
+##Fetching data from server
+
+In the current project we have separated the model, service and the
+controller. We include all the business logic in services. It is
+always recommended to keep the controller dumb and only interact with
+UI. The whole part of interacting with UI should be in controllers and business logic should be
+delegated to services. For example see following definition of a  model and a service which takes
+care of getting all contacts using an http api call:
+
+```javascript
+
+export class Contact {
+  constructor (
+    public id:string,
+    public firstName:string = '',
+    public lastName:string = '',
+    public image:string = '',
+    public skype:string = '',
+    public twitter:string = '',
+    public notes:string = ''
+  ) { }
+
+
+  static fromJson (json:any) {
+    if (!json) return;
+
+    return new Contact (
+      json.id,
+      json.first_name,
+      json.last_name,
+      json.image_url,
+      json.skype,
+      json.twitter,
+      json.notes
+    );
+  }
+
+
+  toJson (stringify?: boolean):any {
+    var doc = {
+      id: this.id,
+      first_name: this.firstName,
+      last_name: this.lastName,
+      image_url: this.image,
+      skype: this.skype,
+      twitter: this.twitter,
+      notes: this.notes
+    };
+
+    return stringify ? JSON.stringify({ resource: [doc] }) : doc;
+  }
+
+}
+```
+
+```javascript
+
+@import {Contact} from '../models/contact.ts';
+@import {BaseHttpService} from './BaseHttpService';
+
+export class ContactService {
+  constructor (private httpService: BaseHttpService) {
+  }
+
+  query (params: UrlSerarchParams) {
+    this.httpService.http.get('/api/v2/_db/table/contacts', { search: params })
+    .map((response) => {
+      return response.json().resource.map((item) {
+        return Contact.fromJson(item);
+      })
+    });
+  }
+}
+```
+and in the controller or the in angular2 we should say component we will
+subscribe to the above service. 
+
+```javascript 
+
+@Component({
+  selector: 'contact-list',
+  templateUrl: './components/contact-list/contact-list.html',
+  styleUrls: ['./components/contact-list/contact-list.css'],
+  providers: [ContactService, BaseHttpService],
+  directives: [ROUTER_DIRECTIVES]
+})
+
+
+export class ContactListCmp {
+  public contacts: Contact[] = [];
+          
+    constructor (private contactService: ContactService, private
+    router: Router) {
+      this.getList();
+    }
+          
+    getList () {
+      let self = this;
+      let params: URLSearchParams = new URLSearchParams();
+      params.set('order', 'last_name+ASC');
+          
+      this.contactService.query(params)
+        .subscribe((contacts: Contact[]) => {
+          self.contacts = contacts
+        });
+    }
+          
+}
+```
+
+the getList method creates a URLSearchParams object which has the url
+params to be sent on the request. These params will be sent to the
+service which in turn will send to server in form of query params.
+
+
+
+##Creating/Updating a record
+
+We will extend out contact service to include one more function which
+takes care of creating/updating a record
+
+```javascript
+save (contact: Contact) {
+  if (contact.id) {
+    return this.httpService.http.put(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/' + contact.id, contact.toJson(true))
+      .map((data) => {
+        return data;
+      });
+  } else {
+      return this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
+        .map((data) => {
+          return data;
+        });
+  }
+}
+```
+
+the above method takes a contact object as param and decides whether too 'PUT' or 'POST' based on whether the object has id or not.
+```javascript
+
+save () {
+  var self = this;
+  var isNew = !!this.contact.id;
+
+  this.contactService.save(this.contact)
+    .subscribe((response) => {
+      if (isNew)
+        alert('New contact created');
+      else
+        alert('Contact updated');
+    })
+}
+```
+
+
+##Deleting records
+i
+```javascript
+
+remove (id: string) {
+  return this.httpService.http
+    .delete(this.baseResourceUrl + '/' + id)
+    .map((response) => {
+      var result: any = response.json();
+      return result.id;
+    });
+}
+```
+
+
 #Additional Resources
 
 More detailed information on the DreamFactory REST API is available [here](http://wiki.dreamfactory.com/DreamFactory/API).
