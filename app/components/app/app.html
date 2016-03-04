@@ -1,5 +1,5 @@
 <section class="sample-app-content">
-  <nav>
+  <nav [hidden]="hideHeader">
     <a [routerLink]="['/ContactList']">Contacts</a>
     <a [routerLink]="['/GroupList']">Groups</a>
     <a (click)="logout()">Logout</a>

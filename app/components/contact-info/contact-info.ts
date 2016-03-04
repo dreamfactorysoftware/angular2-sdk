@@ -33,13 +33,12 @@ export class ContactInfoCmp {
 	infoTypes = ['home', 'work', 'mobile'];
 
 	contactInfo: ContactInfo = new ContactInfo();
-	contactId: any;
 
 
 	constructor(private contactInfoService: ContactInfoService, private router:Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService) {
 
 		var id: string = params.get('id');
-		this.contactId = params.get('contactId');
+		this.contactInfo.contactId = params.get('contactId');
 		if (id) {
 			let self = this;
 			contactInfoService
@@ -61,6 +60,7 @@ export class ContactInfoCmp {
 
 	save() {
 		var self = this;
+
 		if (this.contactInfo.id) {
 			this.httpService.http.put(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info/' + this.contactInfo.id, this.contactInfo.toJson(true))
 				.subscribe((data) => {
@@ -77,6 +77,6 @@ export class ContactInfoCmp {
 	};
 
 	back () {
-		this.router.navigate(['/Contact', { id: this.contactId }]);
+		this.router.navigate(['/Contact', { id: this.contactInfo.contactId }]);
 	};
 }

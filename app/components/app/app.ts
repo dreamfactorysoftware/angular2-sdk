@@ -40,8 +40,16 @@ import {BaseHttpService} from '../../services/base-http';
 ])
 export class AppCmp {
 
+  hideHeader: boolean = false;
   constructor (private httpService: BaseHttpService, private _router:Router) {
-
+    var self = this;
+    _router.subscribe((path) => {
+      if (path === 'login') {
+        self.hideHeader = true;
+      } else {
+        self.hideHeader = false;
+      }
+    });
   }
 
   logout () {

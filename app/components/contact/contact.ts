@@ -124,19 +124,17 @@ export class ContactCmp {
 
 	save () {
 		var self = this;
-		if (this.contact.id) {
-			this.httpService.http.put(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/' + this.contact.id, this.contact.toJson(true))
-			.subscribe((data) => {
-				alert('Saved');
+		var isNew = !!this.contact.id;
+
+		this.contactService.save(this.contact)
+			.subscribe((response) => {
+				if (isNew)
+						alert('New contact created');
+				else
+						alert('Contact updated');
+						
 				self.back();
-			});	
-		} else {
-			this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/', this.contact.toJson(true))
-			.subscribe((data) => {
-				alert('New contact created');
-				self.back();
-			});
-		}
+			})
 		
 	}
 }

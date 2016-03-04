@@ -4,7 +4,7 @@ import {Group} from './group';
 
 export class ContactGroup {
 	constructor(
-		public id: string = null,
+		public id: string,
 		public contact: Contact = null,
 		public group: Group = null
 	) { }
@@ -28,7 +28,7 @@ export class ContactGroup {
 			contact_group_id: this.group && this.group.id
 		};
 
-		return stringify ? JSON.stringify(doc) : doc;
+		return stringify ? JSON.stringify({ resource: [doc] }) : doc;
 	}
 
 }

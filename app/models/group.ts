@@ -1,7 +1,7 @@
 
 export class Group {
 	constructor(
-		public id: string = null,
+		public id: string,
 		public name: string = null
 	) { }
 
@@ -22,7 +22,7 @@ export class Group {
 			name: this.name
 		};
 
-		return stringify ? JSON.stringify(doc) : doc;
+		return stringify ? JSON.stringify({ resource: [doc] }) : doc;
 	}
 
 }

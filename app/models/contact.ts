@@ -1,7 +1,7 @@
 
 export class Contact {
 	constructor (
-			public id:string = null,
+			public id:string,
 			public firstName:string = '',
 			public lastName:string = '',
 			public image:string = '',
@@ -37,7 +37,7 @@ export class Contact {
 			notes: this.notes
 		};
 
-		return stringify ? JSON.stringify(doc) : doc;
+		return stringify ? JSON.stringify({ resource: [doc] }) : doc;
 	}
 
 }

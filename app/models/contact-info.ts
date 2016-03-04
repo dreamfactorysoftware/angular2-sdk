@@ -7,7 +7,7 @@ export enum ContactInfoTypes {
 
 export class ContactInfo {
 	constructor (
-			public id:string = null,
+			public id:string,
 			public contactId:string = null,
 			public address:string = null,
 			public city:string = null,
@@ -52,7 +52,7 @@ export class ContactInfo {
 			phone: this.phone
 		};
 
-		return stringify ? JSON.stringify(doc) : doc;
+		return stringify ? JSON.stringify({ resource: [doc] }) : doc;
 	}
 
 }

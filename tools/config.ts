@@ -32,7 +32,7 @@ export const TOOLS_DIR            = 'tools';
 export const TMP_DIR              = 'tmp';
 export const TEST_DEST            = 'test';
 export const DOCS_DEST            = 'docs';
-export const APP_DEST             = ENV === 'dev' ? `dist/${ENV}` : 'angular2-sdk';
+export const APP_DEST             = ENV === 'dev' ? `dist/${ENV}` : 'add_angular2';
 export const ASSETS_DEST          = `${APP_DEST}/assets`;
 export const CSS_DEST             = `${APP_DEST}/css`;
 export const JS_DEST              = `${APP_DEST}/js`;

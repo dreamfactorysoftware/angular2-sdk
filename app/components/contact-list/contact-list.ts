@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Pipe, PipeTransform} from 'angular2/core';
 import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
 
 import {URLSearchParams} from 'angular2/http';
@@ -16,7 +16,8 @@ import {BaseHttpService} from '../../services/base-http';
   directives: [ROUTER_DIRECTIVES]
 })
 
-export class ContactListCmp implements OnInit {
+
+export class ContactListCmp {
 	public contacts: Contact[] = [];
 	shadowImage: string = 'https://image.freepik.com/free-icon/male-user-shadow_318-34042.png';
 
@@ -39,3 +40,4 @@ export class ContactListCmp implements OnInit {
 		this.router.navigate(['/Contact', { id: contactId }]);
 	}
 }
+

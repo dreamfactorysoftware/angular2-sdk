@@ -19,10 +19,10 @@ export class CustomExceptionHandler extends ExceptionHandler {
 
     call(exception: any, stackTrace: any, reason: string): void {
 
-        if (exception.status === 401) {
-			window.location.hash = '/login';
-        } else {
-			super.call(exception, stackTrace, reason);
-        }
+      if (~[401, 404].indexOf(exception.status)) {
+				window.location.hash = '/login';
+      } else {
+				super.call(exception, stackTrace, reason);
+      }
     }
 }

@@ -6,7 +6,7 @@ import {BaseHttpService} from './base-http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 
-class ServerResponse {
+class ServerObj {
 	constructor (public resource: any) {
 	}
 };
@@ -49,5 +49,19 @@ export class ContactService {
 				var result: any = response.json();
 				return result.id;
 			});	
+	}
+
+	save (contact: Contact) {
+		if (contact.id) {
+			return this.httpService.http.put(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/' + contact.id, contact.toJson(true))
+			.map((data) => {
+				return data;
+			});	
+		} else {
+			return this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
+			.map((data) => {
+				return data;
+			});
+		}
 	}
 }
