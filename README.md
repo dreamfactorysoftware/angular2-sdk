@@ -1,7 +1,7 @@
-Address Book for Angular2
+Address Book for Angular 2
 ==========================
 
-This repo contains a sample address book application for Angular2 that demonstrates how to use the DreamFactory REST API. It includes new user registration, user login, and CRUD for related tables.
+This repo contains a sample address book application for Angular 2 that demonstrates how to use the DreamFactory REST API. It includes new user registration, user login, and CRUD for related tables.
 
 #Getting DreamFactory on your local machine
 
@@ -34,7 +34,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
     - Save changes.
 
 - Import the package file for the app.
-    - From the Apps tab in the admin console, click Import and click 'Address Book for Angular2' in the list of sample apps. The Address Book package contains the application description, source code, schemas, and sample data.
+    - From the Apps tab in the admin console, click Import and click 'Address Book for Angular 2' in the list of sample apps. The Address Book package contains the application description, source code, schemas, and sample data.
     - Leave storage service and folder blank. It will use the default local file service named 'files'.
     - Click the Import button. If successful, your app will appear on the Apps tab. You may have to refresh the page to see your new app in the list.
     
@@ -89,13 +89,13 @@ When the app starts up you can register a new user, or log in as an existing use
 #Example API calls 
 
 
-The dreamfactory for Angular2 has a base http service, an interceptor and a login module
+The dreamfactory for Angular 2 has a base http service, an interceptor and a login module
 which takes care of attaching authorization headers to every outgoing
 request. Hence BaseHttpRequest module should be imported in every
 component that wants to make api calls.
 
 
-Angular2 does not encourage to use globals hence as a workaround in the
+Angular 2 does not encourage to use globals hence as a workaround in the
 BaseHttpService we have a http object which will be used for every http
 api call. The login module will have following code which takes care
 of setting default headers for all requests
@@ -182,7 +182,7 @@ export class ContactService {
   }
 }
 ```
-and in the controller or the in angular2 we should say component we will
+and in the controller or the in angular 2 we should say component we will
 subscribe to the above service. 
 
 ```javascript 
