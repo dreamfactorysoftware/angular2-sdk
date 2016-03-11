@@ -15,16 +15,22 @@
 					<th>
 						Name
 					</th>
+					<th>
+					</th>
 				</tr>
 			</thead>
 
 			<tbody>
-				<tr *ngFor="#group of groups" (click)="show(group.id)">
-					<td>
+				<tr *ngFor="#group of groups">
+					<td (click)="show(group.id)">
 						{{ group.id }}
 					</td>
-					<td>
+					<td (click)="show(group.id)">
 						{{ group.name }}
+					</td>
+					<td>
+						<button type="button" class="btn btn-danger fa fa-trash fa-2x" (click)="remove(group.id)">
+						</button>
 					</td>
 				</tr>
 			</tbody>

@@ -67,7 +67,7 @@ export class ContactInfoCmp {
 					alert('Saved');
 				});
 		} else {
-			this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info/', this.contactInfo.toJson(true))
+			this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info/', this.contactInfo.toJson(true))
 				.subscribe((data) => {
 					alert('New Contact Info created');
 					self.back();

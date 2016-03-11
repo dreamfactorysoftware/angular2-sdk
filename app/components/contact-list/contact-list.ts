@@ -39,5 +39,15 @@ export class ContactListCmp {
 	show (contactId) {
 		this.router.navigate(['/Contact', { id: contactId }]);
 	}
+
+	remove (contactId) {
+		var self = this;
+		this.contactService.remove(contactId)
+			.subscribe(() => {
+				self.contacts = self.contacts.filter((item) => {
+					return item.id != contactId
+				});
+			});
+	}
 }
 

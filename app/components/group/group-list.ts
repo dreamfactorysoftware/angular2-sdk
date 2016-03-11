@@ -35,6 +35,16 @@ export class GroupListCmp {
 			});
 	}
 
+	remove(groupId) {
+		var self = this;
+		this.groupService.remove(groupId)
+			.subscribe(() => {
+				self.groups = self.groups.filter((item) => {
+					return item.id != groupId
+				});
+			});
+	}
+
 	show(groupId) {
 		this.router.navigate(['/Group', { id: groupId }]);
 	}

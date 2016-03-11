@@ -14,16 +14,20 @@
 					<th>
 						Name
 					</th>
+					<th></th>
 				</tr>
 			</thead>
 
 			<tbody>
-				<tr *ngFor="#contact of contacts" (click)="show(contact.id)">
-					<td>
+				<tr *ngFor="#contact of contacts">
+					<td (click)="show(contact.id)">
 						<img [src]="contact.imageUrl || shadowImage" height="40" width="40" class="img-circle img-responsive">
 					</td>
-					<td>
+					<td (click)="show(contact.id)">
 						{{ contact.firstName + ' ' + contact.lastName }}
+					</td>
+					<td>
+						<button type="button" class="btn btn-danger fa fa-2x fa-trash" (click)="remove(contact.id)"></button>
 					</td>
 				</tr>
 			</tbody>

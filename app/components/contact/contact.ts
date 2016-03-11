@@ -124,14 +124,14 @@ export class ContactCmp {
 
 	save () {
 		var self = this;
-		var isNew = !!this.contact.id;
+		var isNew = !this.contact.id;
 
 		this.contactService.save(this.contact)
 			.subscribe((response) => {
 				if (isNew)
-						alert('New contact created');
+					alert('New contact created');
 				else
-						alert('Contact updated');
+					alert('Contact updated');
 						
 				self.back();
 			})
