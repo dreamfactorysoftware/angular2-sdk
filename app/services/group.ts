@@ -56,12 +56,12 @@ export class GroupService {
 
 	save (group: Group): Observable<any> {
 		if (group.id) {
-			return this.httpService.http.put(this.baseResourceUrl + '/' + group.id, group.toJson(true))
+			return this.httpService.http.patch(this.baseResourceUrl, group.toJson(true))
 				.map((response) => {
 					return response;
 				});
 		} else {
-			return this.httpService.http.patch(this.baseResourceUrl, group.toJson(true))
+			return this.httpService.http.post(this.baseResourceUrl, group.toJson(true))
 				.map((response) => {
 					return response;
 				});

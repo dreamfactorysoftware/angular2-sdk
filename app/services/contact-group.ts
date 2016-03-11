@@ -63,7 +63,7 @@ export class ContactGroupService {
 		];
 
 		return this.httpService.http
-			.patch(this.baseResourceUrl, JSON.stringify(data))
+			.post(this.baseResourceUrl, JSON.stringify(data))
 			.map((response) => {
 				var result: ServerResponse = response.json();
 				return result.resource[0];

@@ -53,7 +53,7 @@ export class ContactService {
 
 	save (contact: Contact) {
 		if (contact.id) {
-			return this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/' + contact.id, contact.toJson(true))
+			return this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
 			.map((data) => {
 				return data;
 			});	
