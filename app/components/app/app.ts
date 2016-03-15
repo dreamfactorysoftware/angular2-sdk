@@ -44,7 +44,7 @@ export class AppCmp {
   constructor (private httpService: BaseHttpService, private _router:Router) {
     var self = this;
     _router.subscribe((path) => {
-      if (path === 'login') {
+      if (path === 'login' || path === 'register') {
         self.hideHeader = true;
       } else {
         self.hideHeader = false;
