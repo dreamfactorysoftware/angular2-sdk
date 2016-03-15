@@ -24,11 +24,17 @@ export class RegisterCmp {
 		});
 	}
 
+	private storeToken(data) {
+		this.httpService.http._defaultOptions.headers.set('X-Dreamfactory-Session-Token', data && data.session_token);
+		localStorage.setItem('session_token', data.session_token);
+		this.router.navigate(['ContactList']);
+	}
+
 	register () {
 		this.httpService.http
 			.post(constants.DSP_INSTANCE_URL + '/api/v2/user/register?login=true', JSON.stringify(this.form.value))
 			.subscribe((response) => {
-				this.router.navigate(['/Login']);
+				this.storeToken(response.json());
 			}, (error) => {
 				alert('Error, cannot register. Try again')
 			});
