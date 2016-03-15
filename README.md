@@ -40,7 +40,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
     
 - Load the app from the instance.
     - You can't run this app locally by opening index.html in the browser due to cross origin restrictions with loading templates.
-    - Launch the app directly from the Apps tab in the admin console.  Leave INSTANCE_URL in the code set to empty string.
+    - Change window.instanceUrl and window.appKey in index.html. Leave windiw.instanceUrl empty if running directly from apps tab. You can find value for window.appKey in apps tab under the add_angular2 app detail page.
 
 - Make your app files public.
     - Figure out where your app files are stored. If you used the default storage settings to import the app, it'll be the default local file service named 'files'.
