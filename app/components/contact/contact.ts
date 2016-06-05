@@ -14,12 +14,14 @@ import * as constants from '../../config/constants';
 import {ContactInfoListCmp} from '../contact-info/contact-info-list';
 
 
+import {NotificationService} from '../../services/notification';
+import {BrowserDomAdapter} from 'angular2/platform/browser';
 
 @Component({
   selector: 'contact',
   templateUrl: './components/contact/contact.html',
   styleUrls: ['./components/contact/contact.css'],
-  providers: [ContactService, BaseHttpService, ContactGroupService, GroupService],
+  providers: [ContactService, BaseHttpService, ContactGroupService, GroupService, NotificationService, BrowserDomAdapter],
   directives: [FORM_DIRECTIVES, ContactInfoListCmp]
 })
 
@@ -39,7 +41,7 @@ export class ContactCmp {
 	contactGroups: Array<ContactGroup> = [];
 	remainingGroups: Array<Group> = [];
 
-	constructor (private contactService: ContactService, private groupService: GroupService, private contactGroupService: ContactGroupService, private router:Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService) {
+	constructor(private contactService: ContactService, private groupService: GroupService, private contactGroupService: ContactGroupService, private router: Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService, private notificationService: NotificationService) {
 		
 		var contactId: string = params.get('id');
 
@@ -128,10 +130,11 @@ export class ContactCmp {
 
 		this.contactService.save(this.contact)
 			.subscribe((response) => {
-				if (isNew)
-					alert('New contact created');
+				if (isNew) {
+					this.notificationService.show('success', 'Contact created!');
+				}
 				else
-					alert('Contact updated');
+					this.notificationService.show('success', 'Contact updated!');
 						
 				self.back();
 			})

@@ -5,12 +5,18 @@ import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {BaseHttpService} from '../../services/base-http';
 import * as constants from '../../config/constants';
 
+
+import {NotificationService} from '../../services/notification';
+import {BrowserDomAdapter} from 'angular2/platform/browser';
+
+
+
 @Component({
   selector: 'df-login',
   templateUrl: './components/login/login.html',
   styleUrls: ['./components/login/login.css'],
   directives: [FORM_DIRECTIVES, ROUTER_DIRECTIVES],
-  providers: [BaseHttpService]
+  providers: [BaseHttpService, NotificationService, BrowserDomAdapter]
 })
 
 export class LoginCmp {
@@ -19,7 +25,7 @@ export class LoginCmp {
 	email: Control = new Control('', Validators.required);
 	password: Control = new Control('', Validators.required);
 
-	constructor (formBuilder: FormBuilder, private httpService: BaseHttpService, private _router: Router) {
+	constructor (formBuilder: FormBuilder, private httpService: BaseHttpService, private _router: Router, private notificationService: NotificationService) {
 		this.form = formBuilder.group({
 			email: this.email,
 			password: this.password
@@ -37,7 +43,7 @@ export class LoginCmp {
 			.subscribe((data) => {
 				this.storeToken(data.json());
 			}, (error) => {
-				alert('Error, cannot login. Try again')
+				this.notificationService.show('error', 'Cannot login, try again!');
 			});
 	}
 }

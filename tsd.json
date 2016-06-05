@@ -64,6 +64,12 @@
     },
     "browserify/browserify.d.ts": {
       "commit": "138ad74b9e8e6c08af7633964962835add4c91e2"
+    },
+    "toastr/toastr.d.ts": {
+      "commit": "edb64e4a35896510ce02b93c0bca5ec3878db738"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "edb64e4a35896510ce02b93c0bca5ec3878db738"
     }
   }
 }

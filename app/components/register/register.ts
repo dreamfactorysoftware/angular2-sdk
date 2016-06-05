@@ -3,19 +3,21 @@ import {FORM_DIRECTIVES, FormBuilder, Validators, Control, ControlGroup} from 'a
 import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {BaseHttpService} from '../../services/base-http';
 import * as constants from '../../config/constants';
+import {NotificationService} from '../../services/notification';
+import {BrowserDomAdapter} from 'angular2/platform/browser';
 
 @Component({
   selector: 'df-register',
   templateUrl: './components/register/register.html',
   styleUrls: ['./components/register/register.css'],
-  providers: [BaseHttpService],
+  providers: [BaseHttpService, NotificationService, BrowserDomAdapter],
   directives: [ROUTER_DIRECTIVES]
 })
 
 export class RegisterCmp {
 	form: ControlGroup;
 
-	constructor (private httpService: BaseHttpService, private formBuilder: FormBuilder, private router: Router) {
+	constructor(private httpService: BaseHttpService, private formBuilder: FormBuilder, private router: Router, private notificationService: NotificationService) {
 		this.form = formBuilder.group({
 			first_name: new Control('', Validators.required),
 			last_name: new Control(''),
@@ -36,7 +38,7 @@ export class RegisterCmp {
 			.subscribe((response) => {
 				this.storeToken(response.json());
 			}, (error) => {
-				alert('Error, cannot register. Try again')
+				this.notificationService.show('error', 'Cannot register new user, try again!');
 			});
 	}
 }

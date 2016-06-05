@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from 'angular2/core';
+
 import {
   Router,
   RouteConfig,
@@ -16,14 +17,15 @@ import {LoginCmp} from '../login/login';
 import {RegisterCmp} from '../register/register';
 
 import {BaseHttpService} from '../../services/base-http';
+import {Ng2Notify, Ng2NotifyService} from 'ng2-notify/notify';
 
 @Component({
   selector: 'app',
   templateUrl: './components/app/app.html',
   styleUrls: ['./components/app/app.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [ROUTER_DIRECTIVES],
-  providers: [BaseHttpService]
+  directives: [ROUTER_DIRECTIVES, Ng2Notify],
+  providers: [BaseHttpService, Ng2NotifyService]
 })
 @RouteConfig([
   { path: '/', component: ContactListCmp, as: 'ContactList' },

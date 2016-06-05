@@ -6,6 +6,8 @@ import {ContactInfo} from '../../models/contact-info';
 import {ContactInfoService} from '../../services/contact-info';
 import {BaseHttpService} from '../../services/base-http';
 import * as constants from '../../config/constants';
+import {NotificationService} from '../../services/notification';
+import {BrowserDomAdapter} from 'angular2/platform/browser';
 
 
 
@@ -13,7 +15,7 @@ import * as constants from '../../config/constants';
 	selector: 'contact-info',
 	templateUrl: './components/contact-info/contact-info.html',
 	styleUrls: ['./components/contact-info/contact-info.css'],
-	providers: [ContactInfoService, BaseHttpService],
+	providers: [ContactInfoService, BaseHttpService, NotificationService, BrowserDomAdapter],
 	directives: [FORM_DIRECTIVES]
 })
 
@@ -35,7 +37,7 @@ export class ContactInfoCmp {
 	contactInfo: ContactInfo = new ContactInfo();
 
 
-	constructor(private contactInfoService: ContactInfoService, private router:Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService) {
+	constructor(private contactInfoService: ContactInfoService, private router:Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService, private notificationService: NotificationService) {
 
 		var id: string = params.get('id');
 		this.contactInfo.contactId = params.get('contactId');
@@ -64,12 +66,12 @@ export class ContactInfoCmp {
 		if (this.contactInfo.id) {
 			this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info', this.contactInfo.toJson(true))
 				.subscribe((data) => {
-					alert('Saved');
+					this.notificationService.show('success', 'Contact Info Updated!');
 				});
 		} else {
 			this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info/', this.contactInfo.toJson(true))
 				.subscribe((data) => {
-					alert('New Contact Info created');
+					this.notificationService.show('success', 'New Contact Info Created!');
 					self.back();
 				});
 		}

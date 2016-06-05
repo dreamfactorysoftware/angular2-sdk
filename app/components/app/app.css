@@ -37,3 +37,49 @@
 
 
 
+@-moz-keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0.1;}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0.1;}
+}
+
+@keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0.1;}
+}
+
+.df-notification {
+  position: fixed;
+  display: inline-block;
+  padding: 20px;
+  top: 30px;
+  right: 30px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: white;
+
+  -webkit-animation: fadeOut 5000ms;
+  -moz-animation: fadeOut 5000ms;
+}
+
+
+.df-notification.success {
+  background-color: #51A351;
+}
+
+.df-notification.error {
+  background-color: #BD362F; 
+}
+
+.df-notification.warning {
+  background-color: #F9A937;
+}
+
+.df-notification.info {
+  background-color: #58ABC3;
+}
