@@ -50,7 +50,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
 - Make sure you have a SQL database service named 'db'. Most DreamFactory instances have a default 'db' service for SQLite. You can add one by going to the Services tab in the admin console and creating a new SQL service. Make sure you set the name to 'db'.
 
 
-#How develop the project on your local machine 
+#How to develop the project on your local machine 
 
 ##Prerequisites
 
