@@ -55,13 +55,14 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
 ##Prerequisites
 
 - node v4.x.x higher and npm 2.14.7
+- Visual Studio (msbuild and vcbuild required by npm install on Windows)
 - to develop independently, without having to put source files in df instance, make sure cors is enabled and necessary permissions are given to services in your df instance
 
 ##Run project
 ```bash
 git clone --depth 1 https://github.com/dreamfactorysoftware/angular2-sdk.git
-cd angular2-sdk/angular2-sdk
-# paste your dsp_instance_url and app_key in app/config/config.ts
+cd angular2-sdk
+# paste your instanceUrl and appKey in app/index.html
 # install the project's dependencies
 npm install
 # watches your files and uses livereload by default
