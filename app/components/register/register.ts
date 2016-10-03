@@ -34,7 +34,7 @@ export class RegisterCmp {
 
 	register () {
 		this.httpService.http
-			.post(constants.DSP_INSTANCE_URL + '/api/v2/user/register?login=true', JSON.stringify(this.form.value))
+			.post(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/user/register?login=true', JSON.stringify(this.form.value))
 			.subscribe((response) => {
 				this.storeToken(response.json());
 			}, (error) => {
