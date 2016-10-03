@@ -18,7 +18,7 @@ export class DfRequest {
 		} else {
 			let req:Request = <Request>url;
 			req.headers = req.headers || new Headers();
-			req.headers.set('X-DreamFactory-API-Key', constants.DSP_API_KEY);
+			req.headers.set('X-DreamFactory-API-Key', constants.DREAMFACTORY_API_KEY);
 
 			request = this.http.request(req);
 		}
