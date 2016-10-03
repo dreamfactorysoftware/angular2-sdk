@@ -64,12 +64,12 @@ export class ContactInfoCmp {
 		var self = this;
 
 		if (this.contactInfo.id) {
-			this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info', this.contactInfo.toJson(true))
+			this.httpService.http.patch(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact_info', this.contactInfo.toJson(true))
 				.subscribe((data) => {
 					this.notificationService.show('success', 'Contact Info Updated!');
 				});
 		} else {
-			this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info/', this.contactInfo.toJson(true))
+			this.httpService.http.post(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact_info/', this.contactInfo.toJson(true))
 				.subscribe((data) => {
 					this.notificationService.show('success', 'New Contact Info Created!');
 					self.back();
