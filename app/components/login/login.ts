@@ -39,7 +39,7 @@ export class LoginCmp {
 	}
 
 	formSubmit () {
-		this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/user/session', JSON.stringify(this.form.value))
+		this.httpService.http.post(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/user/session', JSON.stringify(this.form.value))
 			.subscribe((data) => {
 				this.storeToken(data.json());
 			}, (error) => {
