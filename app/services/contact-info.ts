@@ -13,7 +13,7 @@ class ServerResponse {
 
 @Injectable()
 export class ContactInfoService {
-	baseResourceUrl: string = constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_info'; 
+	baseResourceUrl: string = constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact_info'; 
 	constructor(private httpService: BaseHttpService) {
 
 	};

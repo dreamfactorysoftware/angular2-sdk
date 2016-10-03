@@ -15,7 +15,7 @@ class ServerResponse {
 
 @Injectable()
 export class ContactGroupService {
-	baseResourceUrl: string = constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact_group_relationship'; 
+	baseResourceUrl: string = constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact_group_relationship'; 
 	constructor(private httpService: BaseHttpService, private contactService: ContactService, private groupService: GroupService) {
 
 	};

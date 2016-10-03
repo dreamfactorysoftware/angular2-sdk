@@ -13,7 +13,7 @@ class ServerObj {
 
 @Injectable()
 export class ContactService {
-	baseResourceUrl: string = constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact'; 
+	baseResourceUrl: string = constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact'; 
 	constructor(private httpService: BaseHttpService) {
 
 	};
@@ -53,12 +53,12 @@ export class ContactService {
 
 	save (contact: Contact) {
 		if (contact.id) {
-			return this.httpService.http.patch(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
+			return this.httpService.http.patch(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
 			.map((data) => {
 				return data;
 			});	
 		} else {
-			return this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
+			return this.httpService.http.post(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
 			.map((data) => {
 				return data;
 			});
