@@ -40,8 +40,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
     
 - Load the app from the instance.
     - You can't run this app locally by opening index.html in the browser due to cross origin restrictions with loading templates.
-    - Change window.instanceUrl and window.appKey in index.html. Leave window.instanceUrl empty if running directly from apps tab. You can find value for window.appKey in apps tab under the add_angular2 app detail page.
-
+    
 - Make your app files public.
     - Figure out where your app files are stored. If you used the default storage settings to import the app, it'll be the default local file service named 'files'.
     - Go to the Files tab in the admin console. Find your file service. Double click and find the folder for your app, e.g., 'AddressBookForAngularJS'.
@@ -61,7 +60,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
 ```bash
 git clone --depth 1 https://github.com/dreamfactorysoftware/angular2-sdk.git
 cd angular2-sdk/angular2-sdk
-# paste your dsp_instance_url and app_key in app/config/config.ts
+# paste your DREAMFACTORY_INSTANCE_URL and app_key in app/config/config.ts
 # install the project's dependencies
 npm install
 # watches your files and uses livereload by default
@@ -232,12 +231,12 @@ takes care of creating/updating a record
 ```javascript
 save (contact: Contact) {
   if (contact.id) {
-    return this.httpService.http.put(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact/' + contact.id, contact.toJson(true))
+    return this.httpService.http.put(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact/' + contact.id, contact.toJson(true))
       .map((data) => {
         return data;
       });
   } else {
-      return this.httpService.http.post(constants.DSP_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
+      return this.httpService.http.post(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact', contact.toJson(true))
         .map((data) => {
           return data;
         });
