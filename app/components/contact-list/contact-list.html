@@ -1,36 +1,35 @@
 <div class="panel panel-default">
-  	<div class="panel-heading">
-    	<h3 class="text-center">
+    <div class="panel-heading">
+        <h3 class="text-center">
     		Contacts
     		<a class="fa fa-plus btn btn-primary pull-right" [routerLink]="['/NewContact']"></a>
     	</h3>
-  	</div>
-  	<div class="panel-body">
-    	<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>
-					</th>
-					<th>
-						Name
-					</th>
-					<th></th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<tr *ngFor="#contact of contacts">
-					<td (click)="show(contact.id)">
-						<img [src]="contact.imageUrl || shadowImage" height="40" width="40" class="img-circle img-responsive">
-					</td>
-					<td (click)="show(contact.id)">
-						{{ contact.firstName + ' ' + contact.lastName }}
-					</td>
-					<td>
-						<button type="button" class="btn btn-danger fa fa-2x fa-trash" (click)="remove(contact.id)"></button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-  	</div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="#contact of contacts">
+                    <td (click)="show(contact.id)">
+                        <img [src]="contact.imageUrl || shadowImage" height="40" width="40" class="img-circle img-responsive">
+                    </td>
+                    <td (click)="show(contact.id)">
+                        {{ contact.firstName + ' ' + contact.lastName }}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger fa fa-2x fa-trash" (click)="remove(contact.id)"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
