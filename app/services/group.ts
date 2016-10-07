@@ -42,6 +42,7 @@ export class GroupService {
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.log(errMsg); // log to console instead
         localStorage.setItem('session_token', '');
+        window.location.hash = '/login';
         return Observable.throw(errMsg);
     };
     get(id: string): Observable < Group > {
