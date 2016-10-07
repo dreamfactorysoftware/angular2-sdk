@@ -1,9 +1,11 @@
-<section class="sample-app-content">
-	<nav [hidden]="hideHeader">
-	    <a [routerLink]="['/ContactList']">Contacts</a>
-	    <a [routerLink]="['/GroupList']">Groups</a>
-	    <a (click)="logout()">Logout</a>
-	</nav>
-	<ng2-notify></ng2-notify>
-  	<router-outlet></router-outlet>
-</section>
+<div class="container">
+    <section class="sample-app-content">
+        <nav [hidden]="hideHeader">
+            <a [routerLink]="['/ContactList']">Contacts</a>
+            <a [routerLink]="['/GroupList']">Groups</a>
+            <a (click)="logout()">Logout</a>
+        </nav>
+        <ng2-notify></ng2-notify>
+        <router-outlet></router-outlet>
+    </section>
+</div>
