@@ -1,8 +1,8 @@
-import {provide, Injector, Inject} from 'angular2/core';
+import {provide} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 import {ExceptionHandler} from 'angular2/src/facade/exception_handler';
-import {Router, ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
-import {HTTP_PROVIDERS, Http, RequestOptions} from 'angular2/http';
+import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {HTTP_PROVIDERS, RequestOptions} from 'angular2/http';
 import {AppCmp} from './components/app/app';
 import {DfRequestOptions} from './config/interceptors';
 import {CustomExceptionHandler} from './config/exception-handler';
