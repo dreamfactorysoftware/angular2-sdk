@@ -10,7 +10,6 @@ import {ContactService} from '../../services/contact';
 import {ContactGroupService} from '../../services/contact-group';
 import {GroupService} from '../../services/group';
 import {BaseHttpService} from '../../services/base-http';
-import * as constants from '../../config/constants';
 import {ContactInfoListCmp} from '../contact-info/contact-info-list';
 
 
@@ -41,7 +40,8 @@ export class ContactCmp {
 	contactGroups: Array<ContactGroup> = [];
 	remainingGroups: Array<Group> = [];
 
-	constructor(private contactService: ContactService, private groupService: GroupService, private contactGroupService: ContactGroupService, private router: Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService, private notificationService: NotificationService) {
+	constructor(private contactService: ContactService, private groupService: GroupService, 
+		private contactGroupService: ContactGroupService, private router: Router, private params: RouteParams, private formBuilder: FormBuilder, private httpService: BaseHttpService, private notificationService: NotificationService) {
 		
 		var contactId: string = params.get('id');
 
@@ -79,10 +79,10 @@ export class ContactCmp {
 			.subscribe((groups) => {
 				self.remainingGroups = groups.filter((item) => {
 					return !self.contactGroups.some((a) => {
-						return a.group.id == item.id;
+						return a.group.id === item.id;
 					});
 				});
-			})
+			});
 	}
 
 	back () {
@@ -94,7 +94,7 @@ export class ContactCmp {
 
 		var self = this;
 		var group = this.remainingGroups.filter((item) => {
-			return item.id == self.selectedGroupId;
+			return item.id === self.selectedGroupId;
 		})[0];
 
 		this.contactGroupService.addGroup(group.id, this.contact.id)
@@ -133,9 +133,9 @@ export class ContactCmp {
 				if (isNew) {
 					this.notificationService.show('success', 'Contact created!');
 				}
-				else
+				else{
 					this.notificationService.show('success', 'Contact updated!');
-						
+				}						
 				self.back();
 			})
 		
