@@ -55,7 +55,7 @@ export class ContactGroupService {
                                 contactGroup.group = group;
                             });
                     }
-                }).catch(this.handleError);
+                })
                 return contactGroups;
             });
     };
