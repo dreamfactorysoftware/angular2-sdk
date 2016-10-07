@@ -1,4 +1,4 @@
-<div class="signin-card">
+<div class="signin-card container">
 
   <h1 class="text-center">Dreamfactory - Addressbook 2.0</h1>
   <form class="form-horizontal" [ngFormModel]="form" (ngSubmit)="formSubmit()">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="text-center">
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
       <a class="btn btn-primary" [routerLink]="['/Register']">Register</a>
     </div>
 
