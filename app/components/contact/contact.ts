@@ -94,7 +94,7 @@ export class ContactCmp {
 
 		var self = this;
 		var group = this.remainingGroups.filter((item) => {
-			return item.id === self.selectedGroupId;
+			return item.id == self.selectedGroupId;
 		})[0];
 
 		this.contactGroupService.addGroup(group.id, this.contact.id)
