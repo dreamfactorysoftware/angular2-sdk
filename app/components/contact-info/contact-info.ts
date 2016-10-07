@@ -81,6 +81,7 @@ export class ContactInfoCmp {
             this.httpService.http.patch(constants.DREAMFACTORY_INSTANCE_URL + '/api/v2/db/_table/contact_info', this.contactInfo.toJson(true), options)
                 .subscribe((data) => {
                     this.notificationService.show('success', 'Contact Info Updated!');
+                    self.back();
                 });
         } else {
             delete this.contactInfo.id;
