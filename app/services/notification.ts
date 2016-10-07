@@ -1,8 +1,6 @@
 import {Injectable} from'angular2/core';
-import {BrowserDomAdapter} from 'angular2/platform/browser'
+import {BrowserDomAdapter} from 'angular2/platform/browser';
 import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Observable';
-
 
 @Injectable()
 export class NotificationService {
@@ -21,6 +19,6 @@ export class NotificationService {
 
 		setTimeout(function(argument) {
 			notificationEl.remove();
-		}, 4000)
-	}
+		}, 4000);
+	};
 }
