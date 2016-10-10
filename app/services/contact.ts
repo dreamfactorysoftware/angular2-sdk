@@ -32,7 +32,7 @@ export class ContactService {
                     contacts.push(Contact.fromJson(contact));
                 });
                 return contacts;
-            }).catch(this.handleError);
+            })
     };
 
     get(id: string, params ? : URLSearchParams): Observable < Contact > {
