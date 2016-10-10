@@ -10,10 +10,8 @@ import { OrderByPipe  } from '../../models/OrderBy';
 
 
 
-@Component({
-    selector: 'group-list',
-    templateUrl: './components/group/group-list.html',
-    styleUrls: ['./components/group/group.css'],
+@Component({    
+    templateUrl: './components/group/group-list.html',    
     providers: [GroupService, BaseHttpService, ContactService],
     directives: [ROUTER_DIRECTIVES],
     pipes: [OrderByPipe]
@@ -28,9 +26,15 @@ export class GroupListCmp {
         if (token === '' || token === null) {
             this.logout();
         } else {
-            this.getList();
+            
         }
     }
+    
+ngAfterViewInit() {
+  setTimeout(() => {
+    this.getList();
+  }, 1);
+}
     logout() {
         localStorage.setItem('session_token', '');
         this.router.navigate(['Login']);

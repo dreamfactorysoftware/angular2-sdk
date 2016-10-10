@@ -11,21 +11,21 @@ import { ContactService } from '../../services/contact';
 import { ContactGroupService } from '../../services/contact-group';
 
 import { BaseHttpService } from '../../services/base-http';
+import { OrderByPipe  } from "../../models/OrderBy";
 
 
 
-@Component({
-    selector: 'group',
-    templateUrl: './components/group/group.html',
-    styleUrls: ['./components/group/group.css'],
+@Component({    
+    templateUrl: './components/group/group.html',    
     providers: [GroupService, BaseHttpService, ContactGroupService, ContactService],
-    directives: [FORM_DIRECTIVES]
+    directives: [FORM_DIRECTIVES],
+    pipes: [OrderByPipe]
 })
 
 export class GroupCmp {
     form: ControlGroup;
 
-    id = new Control('');
+    //id = new Control('');
     name = new Control('', Validators.required);
 
     selectedContactId: string = null;
@@ -82,7 +82,7 @@ export class GroupCmp {
             .subscribe((contacts) => {
                 self.remainingContacts = contacts.filter((item) => {
                     return !self.contactGroups.some((a) => {
-                        return a.group.id === item.id;
+                        return a.group.id == item.id;
                     });
                 });
             });
@@ -93,7 +93,7 @@ export class GroupCmp {
 
         var self = this;
         var contact = this.remainingContacts.filter((item) => {
-            return item.id === self.selectedContactId;
+            return item.id == self.selectedContactId;
         })[0];
 
         this.contactGroupService.addGroup(this.group.id, contact.id)
