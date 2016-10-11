@@ -72,7 +72,7 @@ npm start
 ```bash
 # make a build, this will create prod folder in dist/ which contains the production build and zip file in the root folder
 
-npm build.prod
+npm run build.prod
 
 # Open dreamfactory instance and in files tab upload the angular2-sdk.zip to your application folder
 # Make sure the launch path of the app is pointing to correct index.html path from angular2-sdk folder in dreamfactory filemanager. You can check that in app detail under Apps tab. 
