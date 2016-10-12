@@ -28,7 +28,7 @@ export class GroupService {
         queryHeaders.append('X-Dreamfactory-Session-Token', localStorage.getItem('session_token'));
         queryHeaders.append('X-Dreamfactory-API-Key', constants.DREAMFACTORY_API_KEY);
         return this.httpService.http
-            .get(this.baseResourceUrl, { search: params })
+            .get(this.baseResourceUrl, { search: params,headers: queryHeaders })
             .map((response) => {
                 var result: ServerResponse = response.json();
                 let groups: Array < Group > = [];
