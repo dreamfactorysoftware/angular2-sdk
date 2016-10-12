@@ -16,23 +16,23 @@ import { LoginCmp } from '../login/login';
 import { RegisterCmp } from '../register/register';
 
 import { BaseHttpService } from '../../services/base-http';
-import { Ng2Notify, Ng2NotifyService } from 'ng2-notify/notify';
+
 
 @Component({
     selector: 'app',
     templateUrl: './components/app/app.html',
     styleUrls: ['./components/app/app.css'],
     encapsulation: ViewEncapsulation.None,
-    directives: [ROUTER_DIRECTIVES, Ng2Notify],
-    providers: [BaseHttpService, Ng2NotifyService]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [BaseHttpService]
 })
 @RouteConfig([
-    { path: '/', component: ContactListCmp, as: 'ContactList' },
+    { path: '/', component: GroupListCmp, as: 'GroupList' },
     { path: '/contacts/new', component: ContactCmp, as: 'NewContact' },
     { path: '/contacts/:id', component: ContactCmp, as: 'Contact' },
     { path: '/contact-info/new/:contactId', component: ContactInfoCmp, as: 'NewContactInfo' },
     { path: '/contact-info/:id/:contactId', component: ContactInfoCmp, as: 'ContactInfo' },
-    { path: '/groups', component: GroupListCmp, as: 'GroupList' },
+    { path: '/contacts', component: ContactListCmp, as: 'ContactList' },    
     { path: '/groups/new', component: GroupCmp, as: 'NewGroup' },
     { path: '/groups/:id', component: GroupCmp, as: 'Group' },
     { path: '/login', component: LoginCmp, as: 'Login' },
