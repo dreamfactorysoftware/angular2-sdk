@@ -43,7 +43,7 @@ export class RegisterCmp {
             .subscribe((response) => {
                 this.storeToken(response.json());
             }, (error) => {
-                this.notificationService.show('error', JSON.parse(error._body).error.message);
+                this.notificationService.show('error', error.json().error.message);
             });
     }
 }
