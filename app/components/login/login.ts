@@ -44,7 +44,7 @@ export class LoginCmp {
             .subscribe((data) => {
                 this.storeToken(data.json());
             }, (error) => {
-                this.notificationService.show('error', JSON.parse(error._body).error.message);
+                this.notificationService.show('error', error.json().error.message);
             });
     }
 }
