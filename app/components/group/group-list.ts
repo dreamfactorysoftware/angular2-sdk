@@ -6,29 +6,29 @@ import { Group } from '../../models/group';
 import { GroupService } from '../../services/group';
 import { ContactService } from '../../services/contact';
 import { BaseHttpService } from '../../services/base-http';
-import { OrderByPipe  } from '../../models/OrderBy';
+import { OrderBy } from '../../models/OrderBy';
 
 
 
-@Component({    
-    templateUrl: './components/group/group-list.html',    
+@Component({
+    templateUrl: './components/group/group-list.html',
     providers: [GroupService, BaseHttpService, ContactService],
     directives: [ROUTER_DIRECTIVES],
-    pipes: [OrderByPipe]
+    pipes: [OrderBy]
 })
 
 export class GroupListCmp {
     public groups: Group[] = [];
     shadowImage: string = 'https://image.freepik.com/free-icon/male-user-shadow_318-34042.png';
 
-    constructor(private groupService: GroupService, private router: Router) {        
+    constructor(private groupService: GroupService, private router: Router) {
         var token = localStorage.getItem('session_token');
         if (token === '' || token === null) {
             this.logout();
         } else {
-           this.getList(); 
+            this.getList();
         }
-    }    
+    }
 
     logout() {
         localStorage.setItem('session_token', '');
@@ -45,9 +45,9 @@ export class GroupListCmp {
     }
 
     remove(groupId) {
-    	var token = localStorage.getItem('session_token');
-        if (token ==='' || token === null) {
-            this.logout(); 
+        var token = localStorage.getItem('session_token');
+        if (token === '' || token === null) {
+            this.logout();
         }
         var self = this;
         this.groupService.remove(groupId)

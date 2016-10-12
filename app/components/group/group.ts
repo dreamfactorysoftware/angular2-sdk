@@ -11,7 +11,7 @@ import { ContactService } from '../../services/contact';
 import { ContactGroupService } from '../../services/contact-group';
 
 import { BaseHttpService } from '../../services/base-http';
-import { OrderByPipe  } from "../../models/OrderBy";
+import { OrderBy  } from "../../models/OrderBy";
 
 
 
@@ -19,7 +19,7 @@ import { OrderByPipe  } from "../../models/OrderBy";
     templateUrl: './components/group/group.html',    
     providers: [GroupService, BaseHttpService, ContactGroupService, ContactService],
     directives: [FORM_DIRECTIVES],
-    pipes: [OrderByPipe]
+    pipes: [OrderBy]
 })
 
 export class GroupCmp {

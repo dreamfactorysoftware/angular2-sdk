@@ -18,7 +18,7 @@
 			</thead>
 
 			<tbody>
-				<tr *ngFor="#group of groups">					
+				<tr *ngFor="#group of groups | orderBy : ['name']">					
 					<td (click)="show(group.id)">
 						{{ group.name }}
 					</td>
