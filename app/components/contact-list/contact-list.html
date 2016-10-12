@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="#contact of contacts">
+                <tr *ngFor="#contact of contacts | orderBy : ['lastName']">
                     <td (click)="show(contact.id)">
                         <img [src]="contact.imageUrl || shadowImage" height="40" width="40" class="img-circle img-responsive">
                     </td>

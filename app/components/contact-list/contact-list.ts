@@ -4,7 +4,7 @@ import { URLSearchParams } from 'angular2/http';
 import { Contact } from '../../models/contact';
 import { ContactService } from '../../services/contact';
 import { BaseHttpService } from '../../services/base-http';
-import { OrderByPipe  } from '../../models/OrderBy';
+import { OrderBy } from '../../models/OrderBy';
 
 @Component({
     selector: 'contact-list',
@@ -12,7 +12,7 @@ import { OrderByPipe  } from '../../models/OrderBy';
     styleUrls: ['./components/contact-list/contact-list.css'],
     providers: [ContactService, BaseHttpService],
     directives: [ROUTER_DIRECTIVES],
-    pipes: [OrderByPipe]
+    pipes: [OrderBy]
 })
 
 
@@ -48,9 +48,9 @@ export class ContactListCmp {
     }
 
     remove(contactId) {
-    	var token = localStorage.getItem('session_token');
-        if (token ==='' || token === null) {
-            this.logout(); 
+        var token = localStorage.getItem('session_token');
+        if (token === '' || token === null) {
+            this.logout();
         }
         var self = this;
         this.contactService.remove(contactId)
