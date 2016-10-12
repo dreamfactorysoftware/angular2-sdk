@@ -7,6 +7,7 @@ import { ContactService } from './contact';
 import { GroupService } from './group';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 import {Observable} from 'rxjs/Observable';
 
 class ServerResponse {

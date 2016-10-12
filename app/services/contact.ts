@@ -5,6 +5,7 @@ import * as constants from '../config/constants';
 import { BaseHttpService } from './base-http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 import {Observable} from 'rxjs/Observable';
 
 class ServerObj {
@@ -32,7 +33,7 @@ export class ContactService {
                     contacts.push(Contact.fromJson(contact));
                 });
                 return contacts;
-            })
+            }).catch(this.handleError);
     };
 
     get(id: string, params ? : URLSearchParams): Observable < Contact > {
