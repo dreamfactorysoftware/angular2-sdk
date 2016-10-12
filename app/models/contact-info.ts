@@ -7,8 +7,8 @@ export enum ContactInfoTypes {
 
 export class ContactInfo {
 	constructor (
-			public id:string,
-			public contactId:string = null,
+			public id:number= null,
+			public contactId:string= null,
 			public address:string = null,
 			public city:string = null,
 			public state:string = null,

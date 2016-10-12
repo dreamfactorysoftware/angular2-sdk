@@ -1,7 +1,7 @@
 
 export class Group {
 	constructor(
-		public id: string,
+		public id: string = null,
 		public name: string = null
 	) { }
 
