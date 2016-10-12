@@ -26,15 +26,10 @@ export class GroupListCmp {
         if (token === '' || token === null) {
             this.logout();
         } else {
-            
+           this.getList(); 
         }
-    }
-    
-ngAfterViewInit() {
-  setTimeout(() => {
-    this.getList();
-  }, 1);
-}
+    }    
+
     logout() {
         localStorage.setItem('session_token', '');
         this.router.navigate(['Login']);
