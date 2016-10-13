@@ -39,17 +39,19 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
     - From the Apps tab in the admin console, click Import and click 'Address Book for Angular 2' in the list of sample apps. The Address Book package contains the application description, schemas, and sample data.
     - Leave storage service and folder blank. You will be running the app locally on your machine so no file storage is required.
     - Click the Import button. If successful, your app will appear on the Apps tab. You may have to refresh the page to see your new app in the list.
-    
-#How to develop the project on your local machine 
+
+- Edit your app API key and instance URL
+    - Edit app/config/constants.ts and set DREAMFACTORY_API_KEY to the key for your new app. The API key is shown on the app details in the Apps tab of the admin console. Set DREAMFACTORY_INSTANCE_URL to the base URL for your DreamFactory instance.
+
+#How to run the project on your local machine
 
 ##Prerequisites
 
 - node v4.x.x higher and npm 2.14.7
 
-##Run project
 ```bash
 git clone https://github.com/dreamfactorysoftware/angular2-sdk.git
-cd angular2-sdk
+cd angular2-sdk/angular2-sdk
 # paste your DREAMFACTORY_INSTANCE_URL and DREAMFACTORY_API_KEY in app/config/config.ts
 npm install -g nativescript
 npm install -g typescript
