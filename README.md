@@ -49,7 +49,7 @@ To download and install DreamFactory, follow the instructions [here](http://wiki
 ##Run project
 ```bash
 git clone https://github.com/dreamfactorysoftware/angular2-sdk.git
-cd angular2-sdk/angular2-sdk
+cd angular2-sdk
 # paste your DREAMFACTORY_INSTANCE_URL and DREAMFACTORY_API_KEY in app/config/config.ts
 npm install -g nativescript
 npm install -g typescript
