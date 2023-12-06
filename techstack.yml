@@ -1,0 +1,984 @@
+repo_name: dreamfactorysoftware/angular2-sdk
+report_id: e69c3d470eeb46db0d989cfbfd5b8638
+repo_type: Public
+timestamp: '2023-12-06T22:37:29+00:00'
+requested_by: wjgilmore
+provider: github
+branch: master
+detected_tools_count: 71
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source: Repo Metadata
+- name: ".NET"
+  description: A free, cross-platform, open source developer platform for building
+    many different types of applications
+  website_url: http://www.microsoft.com/net/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Bootstrap
+  description: Simple and flexible HTML, CSS, and JS for popular UI components and
+    interactions
+  website_url: http://getbootstrap.com/
+  version: 3.3.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.13.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 17:42:39.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: RxJS
+  description: The Reactive Extensions for JavaScript
+  website_url: http://reactivex.io/rxjs/
+  version: 5.0.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Concurrency Frameworks
+  image_url: https://img.stackshare.io/service/1796/984368.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Browserify
+  description: Browser-side require() the node.js way
+  website_url: http://browserify.org/
+  version: 13.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/849/9esmqty2.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Jasmine
+  description: DOM-less simple JavaScript testing framework
+  website_url: http://jasmine.github.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/831/7c0b595409af531b9cdeb07f8c513e8b.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Karma
+  description: Spectacular Test Runner for JavaScript
+  website_url: http://karma-runner.github.io/
+  version: 0.13.15
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Browser Testing
+  image_url: https://img.stackshare.io/service/1420/TidYGd6a.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: LiveReload
+  description: CSS edits and image changes apply live. CoffeeScript, SASS, LESS and
+    others just work.
+  website_url: http://livereload.com
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Live Reloading
+  image_url: https://img.stackshare.io/service/2601/128.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: NuGet
+  description: The package manager for .NET
+  website_url: https://www.nuget.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: PhantomJS
+  description: Scriptable Headless WebKit
+  website_url: https://phantomjs.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Headless Browsers
+  image_url: https://img.stackshare.io/service/1832/phantomjs.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Protractor
+  description: End-to-end test framework for Angular and AngularJS applications
+  website_url: http://angular.github.io/protractor
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/1754/protractor-logo1.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 17:42:39.000000000 Z
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 3.9.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: HTML
+  description: Hypertext Markup Language for creating web pages.
+  website_url: http://
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source: app/components/about/about.html
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source: Repo Metadata
+- name: chalk
+  description: terminal colors
+  website_url: https://github.com/chalk/chalk
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/8072/13122722.png
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: angular2
+  description: Angular 2 - a web framework for modern web apps
+  package_url: https://www.npmjs.com/angular2
+  version: 2.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17505/default_1922051267fa78212ab6eb1238cdf6aab8771493.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-06-05 16:03:49.000000000 Z
+- name: async
+  description: Higher-order functions and common patterns for asynchronous code
+  package_url: https://www.npmjs.com/async
+  version: 1.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15851/default_a2f722724df977d0f7752839e5d8845ab41f69d5.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: connect-livereload
+  description: Connect middleware for adding the livereload script to the response
+  package_url: https://www.npmjs.com/connect-livereload
+  version: 0.5.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17161/default_9746cbb559e39df4afd8298f9a252dff8519e646.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: del
+  description: Delete files and directories
+  package_url: https://www.npmjs.com/del
+  version: 2.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15907/default_a582b9fecca65f37fe68520c8f84d3bcae35db24.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: es6-shim
+  description: ECMAScript 6
+  package_url: https://www.npmjs.com/es6-shim
+  version: 0.33.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16346/default_17385ab3aa01d4c295c08d4a9736140df691c5e9.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: event-stream
+  description: Construct pipes of streams of events
+  package_url: https://www.npmjs.com/event-stream
+  version: 3.3.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16246/default_dc80ff0a17bac19253430a4f0f586714841116db.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Jason Gilmore
+  last_updated_on: 2018-11-27 01:37:25.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.13.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 17:42:39.000000000 Z
+  vulnerabilities:
+  - name: qs vulnerable to Prototype Pollution
+    cve_id: CVE-2022-24999
+    cve_url: https://github.com/advisories/GHSA-hrpp-h998-j3pp
+    detected_date: Dec 7
+    severity: high
+    first_patched: 4.17.3
+- name: extend
+  description: Port of jQuery.extend for node.js and the browser
+  package_url: https://www.npmjs.com/extend
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16161/default_77b54a203c743d16eddb6b6390cba17218454fa0.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+  vulnerabilities:
+  - name: Prototype Pollution in extend
+    cve_id: CVE-2018-16492
+    cve_url: https://github.com/advisories/GHSA-qrmc-fj45-qfc2
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 3.0.2
+- name: gulp-concat
+  description: Concatenates files
+  package_url: https://www.npmjs.com/gulp-concat
+  version: 2.5.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15973/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-cssnano
+  description: Minify CSS with cssnano
+  package_url: https://www.npmjs.com/gulp-cssnano
+  version: 2.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16774/default_cc1793e454d6d035c188f0198b037d58f372e7f2.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-filter
+  description: Filter files in a `vinyl` stream
+  package_url: https://www.npmjs.com/gulp-filter
+  version: 2.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16385/default_b5c8f3c8e46d368f74a982d06d7f13291fe651ea.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-inject
+  description: A javascript, stylesheet and webcomponent injection plugin for Gulp,
+    i.e
+  package_url: https://www.npmjs.com/gulp-inject
+  version: 1.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17107/default_cd46073ead3b39efb82d67472bd530a8fbcbda52.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-inline-ng2-template
+  description: Gulp plugin to inline HTML and CSS into Angular 2 component views
+  package_url: https://www.npmjs.com/gulp-inline-ng2-template
+  version: 0.0.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17188/default_21a9522c66101ebad0e63609af74acb35fe29a0a.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-06-05 16:03:49.000000000 Z
+- name: gulp-load-plugins
+  description: Automatically load any gulp plugins in your package.json
+  package_url: https://www.npmjs.com/gulp-load-plugins
+  version: 0.10.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16154/default_ac04a744873b460c4ef30a7450ed0c83223640ab.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-plumber
+  description: Prevent pipe breaking caused by errors from gulp plugins
+  package_url: https://www.npmjs.com/gulp-plumber
+  version: 1.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16033/default_72d4237e6719b7d75d0307bf8b5718584fdc3425.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-shell
+  description: A handy command line interface for gulp
+  package_url: https://www.npmjs.com/gulp-shell
+  version: 0.4.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16370/default_22cf6cee54c697b5a223902962cc57a55ee80be9.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-sourcemaps
+  description: Source map support for Gulp.js
+  package_url: https://www.npmjs.com/gulp-sourcemaps
+  version: 1.5.2
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15958/default_4040fefea2f98006727f63d042275b96a275ab2d.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-template
+  description: Render/precompile Lodash/Underscore templates
+  package_url: https://www.npmjs.com/gulp-template
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16872/default_21db97bdb9f4092d80f256d3afec4658fbafe443.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-tslint
+  description: TypeScript linter Gulp plugin
+  package_url: https://www.npmjs.com/gulp-tslint
+  version: 3.3.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16464/default_73c88a18b684e01cbdbf945631a40a44aff5a777.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-typedoc
+  description: Gulp plugin for the TypeDoc typescript documentation tool
+  package_url: https://www.npmjs.com/gulp-typedoc
+  version: 1.2.1
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17341/default_6afdd1bc7e3815a18b56c31d0b4acf372c00f6e2.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-typescript
+  description: A typescript compiler for gulp with incremental compilation support
+  package_url: https://www.npmjs.com/gulp-typescript
+  version: 2.8.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16141/default_73326c44fbfa7369fd17573edb113e5d849468bc.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-uglify
+  description: Minify files with UglifyJS
+  package_url: https://www.npmjs.com/gulp-uglify
+  version: 1.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15910/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-util
+  description: Utility functions for gulp plugins
+  package_url: https://www.npmjs.com/gulp-util
+  version: 3.0.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15912/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-watch
+  description: Watch, that actually is an endless stream
+  package_url: https://www.npmjs.com/gulp-watch
+  version: 4.2.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16175/default_351a89f21bfb241e8dabeb1444cf56f529948708.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: gulp-zip
+  description: ZIP compress files
+  package_url: https://www.npmjs.com/gulp-zip
+  version: 3.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16846/default_5c6919c5e02b8e6c83f3a2b23db5b6962e3caca0.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-23 13:35:36.000000000 Z
+- name: jasmine-core
+  description: Official packaging of Jasmine's core files for use by Node.js projects
+  package_url: https://www.npmjs.com/jasmine-core
+  version: 2.3.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15905/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: jasmine-spec-reporter
+  description: Spec reporter for jasmine behavior-driven development framework
+  package_url: https://www.npmjs.com/jasmine-spec-reporter
+  version: 2.4.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16066/default_8725384794b44fe56f31da1d21ae759cf07be7a5.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: karma-chrome-launcher
+  description: A Karma plugin. Launcher for Chrome and Chrome Canary
+  package_url: https://www.npmjs.com/karma-chrome-launcher
+  version: 0.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15860/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: karma-ie-launcher
+  description: A Karma plugin. Launcher for Internet Explorer
+  package_url: https://www.npmjs.com/karma-ie-launcher
+  version: 0.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16553/default_682ffbfa52bb1873b212151cffed5d464d6efdfb.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: karma-jasmine
+  description: A Karma plugin - adapter for Jasmine testing framework
+  package_url: https://www.npmjs.com/karma-jasmine
+  version: 0.3.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15886/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: karma-mocha-reporter
+  description: Karma reporter with mocha style logging
+  package_url: https://www.npmjs.com/karma-mocha-reporter
+  version: 1.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16127/default_77b54a203c743d16eddb6b6390cba17218454fa0.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: merge-stream
+  description: Create a stream that emits events from multiple other streams
+  package_url: https://www.npmjs.com/merge-stream
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16419/default_d73092129e1cde5ea9f47f22e2d7c3db7bd6da8d.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Jason Gilmore
+  last_updated_on: 2018-11-27 01:37:25.000000000 Z
+- name: open
+  description: Open stuff like URLs, files, executables. Cross-platform
+  package_url: https://www.npmjs.com/open
+  version: 0.0.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16245/default_5dfc1810d0882ab844578a326bb8bf19e45e7227.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+  vulnerabilities:
+  - name: Command Injection in open
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-28xh-wpgr-7fm8
+    detected_date: Aug 22
+    severity: critical
+    first_patched: 6.0.0
+- name: reflect-metadata
+  description: Polyfill for Metadata Reflection API
+  package_url: https://www.npmjs.com/reflect-metadata
+  version: 0.1.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16019/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: rimraf
+  description: A deep deletion module for node
+  package_url: https://www.npmjs.com/rimraf
+  version: 2.4.3
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15807/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: run-sequence
+  description: Run a series of dependent gulp tasks in order
+  package_url: https://www.npmjs.com/run-sequence
+  version: 1.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16004/default_f8be85789693a9901dbcfa43c135c60525ae49a1.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: semver
+  description: The semantic version parser used by npm
+  package_url: https://www.npmjs.com/semver
+  version: 5.0.3
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18809/default_dad3dc9dde4b82dc2a7bd32aa091165887abe57b.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+  vulnerabilities:
+  - name: semver vulnerable to Regular Expression Denial of Service
+    cve_id: CVE-2022-25883
+    cve_url: https://github.com/advisories/GHSA-c2qf-rxjj-qqgw
+    detected_date: Jun 23
+    severity: moderate
+    first_patched: 5.7.2
+- name: serve-static
+  description: Serve static files
+  package_url: https://www.npmjs.com/serve-static
+  version: 1.9.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16295/default_f04d39fc656c2e32ee1b9d3875a3002459aa3b69.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: slash
+  description: Convert Windows backslash paths to slash paths
+  package_url: https://www.npmjs.com/slash
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16831/default_1b078765f7b7ae4ccce598a7251eb06451511e5e.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: systemjs
+  description: Dynamic ES module loader
+  package_url: https://www.npmjs.com/systemjs
+  version: 0.19.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16299/default_8b65a873fd3277d73483d6846fa38192391abf23.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: tiny-lr
+  description: Tiny LiveReload server, background-friendly
+  package_url: https://www.npmjs.com/tiny-lr
+  version: 0.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17432/default_feeb5f9682b10b4223ce6e22e98c891d2c0e3851.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: traceur
+  description: ES6 to ES5 compiler
+  package_url: https://www.npmjs.com/traceur
+  version: 0.0.91
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17614/default_e98b11d23d67b728bd1f3e02eba62d97a55febbd.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: ts-node
+  description: TypeScript execution environment and REPL for node.js
+  package_url: https://www.npmjs.com/ts-node
+  version: 0.5.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: tsd
+  description: Check TypeScript type definitions
+  package_url: https://www.npmjs.com/tsd
+  version: 0.6.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16858/default_21db97bdb9f4092d80f256d3afec4658fbafe443.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: typedoc
+  description: Create api documentation for TypeScript projects
+  package_url: https://www.npmjs.com/typedoc
+  version: 0.3.12
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15983/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: vinyl-buffer
+  description: Convert streaming vinyl files to use buffers
+  package_url: https://www.npmjs.com/vinyl-buffer
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16203/default_9a7a7dcd69c12c746dc4000dc4d1b75758079c9f.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: vinyl-source-stream
+  description: Use conventional text streams at the start of your gulp or vinyl pipelines
+  package_url: https://www.npmjs.com/vinyl-source-stream
+  version: 1.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16081/default_8725384794b44fe56f31da1d21ae759cf07be7a5.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Jason Gilmore
+  last_updated_on: 2018-11-27 01:37:25.000000000 Z
+- name: yargs
+  description: Yargs the modern, pirate-themed, successor to optimist
+  package_url: https://www.npmjs.com/yargs
+  version: 3.25.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15887/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
+- name: zone.js
+  description: Zones for JavaScript
+  package_url: https://www.npmjs.com/zone.js
+  version: 0.5.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15915/default_59a1b5716eefa3750c20936c3d53ff13a6390ee1.png
+  detection_source_url: github.com/dreamfactorysoftware/angular2-sdk/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: javascriptboss99
+  last_updated_on: 2016-02-22 14:44:12.000000000 Z
